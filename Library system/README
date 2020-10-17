@@ -1,0 +1,62 @@
+david.oriel
+
+
+
+==================
+=  Description:  =
+==================
+
+Book.java:
+the first class i made.
+in this class we cunstructed the book class, 
+here we can make a book object that can be added to the library.
+The book itself contains few paramethers:
+-The name of the book.
+- The name of the author.
+-The year of publication.
+- the dramatic value.
+- The comic value.
+-The education value.
+
+Patron.java:
+The second class, in this class we can construct a patron,
+ the patron can be added to the library, he can loan books and returns them.
+the parameters for each patron are:
+- His first name.
+- His last name.
+- Comic tendency.
+- Drama tendency.
+- Education tendency.
+
+those tendencies represent how much the patron values each subject,
+if he prefers comic over drama etc.. 
+
+Library.java:
+the third and the "main" class. in the library class we can add book and register patrons.
+every patron whose registered to the library can loan book that belongs to the library, 
+if it is not taken allready,
+for creating a library we need to add those paramethers:
+- Library book capacity.
+- Max borrowed books for every patron.
+- Max patron capacity the can register to the library.
+
+exept methods for adding books or register patrons , the library class is also very smart,
+the library can suggest books to a patron by his preferences!
+
+==================
+=  Design issues:  =
+==================
+
+
+I didnt had many issues with the exercise.
+At first i thought that it will be hard to start programming in java but it is no so much diffrent 
+from python.
+when i design the classes i always kept in mind that the next class need to use the methods in the previous
+class.
+I used the internet few times for more understanding hows the array works and how to implement a correct
+syntax.
+
+
+ 
+ 
+ 
