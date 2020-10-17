@@ -1,0 +1,70 @@
+david.oriel
+
+
+
+==================
+=  Description:  =
+==================
+
+The first part of the project is to build a locker for the spaceship crew and a long term strorage 
+in case there is no space in the first locker.
+the locker capacity is decided when the class is been created.
+The long term storange is been created automatically when a locker is been created, is used composition
+on the long term storage and made it static so every locker created will have the same long term storage.
+
+The second part includes A class of a booping site for searching hotels in india.
+Boopind class includes three methods.
+
+In total the jar file includes locker class, long term class, tests for both of them, a suit for thos tests.
+a booping site class, test for that class, and two comparator classes.
+
+==================
+=  Implementation:  =
+
+==================
+i Decicded to use hash map data structure for the locker and the long term locker. I knew that i had two 
+types of data that i had to store, the item, and the capacity of the item, so an easy thought was to choose
+hashMaps. On the other hand if i used array it was a lot harder to obtain data about a specific items and so.
+And ofcours, returning the inventory is alot easier with a map then using an array.
+One more important note:
+When trying to add zero baseball bats to a locker with football , the function will return -2, and the
+baseball bat will not be added, thats because this is the FIRST thing to check, but adding zero items 
+if different situation will not cause problems and will return 0 while the item will not appear in the
+inventory. 
+
+==================
+=  Design issues:  =
+==================
+
+i started the project by building the long term storage class because the locker depends on him,
+after that i wrote some test for that class.
+After that i understood that the tests should help me build the class so it should be built while the
+actual class is build. When i started to work on the locker class i simultaneously wrote the 
+tests for that class, it helpt and i started to understood
+how important it is for the actual class, it was very good for designing the addItem method. 
+When i first worked on that method it took me a long time to design it.
+A day after i deleted the method because the functionallity was bad and i renew it with help from the tests.
+
+In the hotel part the story was different, first i wrote TESTS for the class, before even starting to work on
+the class method, it was very helpfull in that way because i knew better how to write the method, and 
+it was more easy to build.
+In that project i learned how to write tests, i didnt knew a thing about test and now i can say i get very 
+familiar with it, i learned a lot from that project.
+
+One more important point is about the comparator, i didnt know that this kind of sorting is really exists,
+i believe this is very usefull, and im sure that i will use it in the future.
+
+About the design itself, i considered with few people if i need to made an abstract class or inheritace,
+few people told me to create and abstract class and few of them told me to create inheritage..
+at the end i decided not to. i feel my knowledge in those things can be better and i dont want to 
+just create classes and not to know what to do.
+i understand that this is the heart of the course and i know, that in the next exercise 
+i will made better designs, and i will invest time for deep study all the design methods.
+Anyways n this exercise i think this is less important because there is almost zero duplicate code.
+I explained my decision, i think its better from just create classes without knowing what im doing.
+  
+
+
+ 
+ 
+ 
