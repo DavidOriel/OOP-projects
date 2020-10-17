@@ -1,0 +1,66 @@
+david.oriel
+
+LIST OF LOGINS: none..
+
+==================
+=  Description:  =
+==================
+
+In this exercise i created a game class for the spacewar class,
+i have built the main spaceship class and six specific space ship classes that i will explain bellow:
+HUMAN: The human ship controlled by the user, he can shoot, teleport, and active his shield.
+BASHER: The basher spaceship always try to bash other spaceships by hit them with his shield on.
+AGGRESSIVE: This ship will focus on the nearest ship and will try to attack him until he will fined his next
+victim, a ship that closer then the last ship.
+RUNNER: That ship will try to run away form other ships, if a the runner will feel threatened, 
+meaning there will be a ship that are to close to him, the runner will teleport to a new random place.
+DRUNKARD: The pilot of that ship drank to much last night, he doesnt no where he goes,
+so he will turn randomlly, accelerate randomly and there is a chance of 1 out of 15 that he will teleport.
+also he will shoot if he will see a ship that is to close to him.
+SPECIAL: the special ship is a very dangerous ship, he will move in circles and will fire to every direction.
+his shoots doesnt cost any energy and he has less cooldown between two shots.
+Also he has 1 of 12 chance to teleport.
+ 
+
+==================
+=  Design issues:  =
+==================
+
+First of all i want to mention that the exercise was a really good one, before i started i spend few 
+hours again to watch the class lectures to understand exactlly what i need to do.
+The soffest part in my studies is the actual program and while programming  and ofcourse,
+it wasnt easy but finally i have learned a lot about designing and im sure that in  the next 
+exercise i will have a good idea how to start and how to choose the best way to program the exercise.
+
+So to start i thought about how i gonna realize all the spaceship classes without duplicate code 
+and without complications that can execute errors that will be hard for me to find.
+I decided first that i will write the main methods that belongs to all the spaceships
+in the spaceship main class, in that way i had a good idea how to proceed.
+It was in mind to make the code simple,
+as for example in the spaceship class i returned the enemy images and only
+in the human spaceship class i overide that function and returned the human spaceship image,
+so in every other class i didnt had to touch that method and in that way i made it more simple.
+Also i wanted to make another class for every enemy ship but ant the end i decided
+not to do so for making the program more simple and not "heavy", i didnt want to confuse myself.
+Another thing that i though of is that at the beggining i wanted to write a doaction method
+for every specific spaceship but after more thinking i figure that it will be better for me to write
+the main operation that every ship does per round in the maindoaction method and for every 
+specific ship i made a sub doAction method that represents the specific behavior
+of that ship, turns out that it is working and in that way the code is more organized.
+The design make it is easy to change the attributes of every ship,
+and also to change function in the spaceship class.
+Also the relationship between ships take place only in the higher classes like
+in the spacewars class so the is high modularity for this program.
+
+
+in conclusion i think the exercise was really good, atleast for me, and i have learned a lot from it.
+
+
+
+
+ 
+
+
+ 
+ 
+ 
