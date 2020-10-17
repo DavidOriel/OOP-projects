@@ -1,0 +1,82 @@
+david.oriel
+
+LIST OF LOGINS: none..
+
+==================
+=  Description:  =
+==================
+
+In this exercise i created a program for sorting files and ordering files.
+after the sorting and ordering the files, they will be printed by the given order.
+when there will be a problem with the conditions, a warning line will accord and the files we be 
+filtered or ordered by a default filter or order.
+
+
+ 
+ 
+
+==================
+=  Design issues:  =
+==================
+
+
+First of all i started by creating filter and order objects. 
+i wanted to start with the easy part but after one day 
+i figure that this is not smart and there will be things i wouldnt 
+notice that can ruin all the small classes i already created. 
+so i started from the beginning.
+i created a class that called parser. 
+The parser will create for me arrays of two strings. 
+each string will represent the instruction for creating specific  filter object and order object.
+The parser under the main class, will check if there is Type 2 exceptions and throws them,
+ the main class will catch them and
+print an Error massage.
+after that comes the section class, this class will be created by the parser and will be hold in an array.
+for every array in the list array that the parser created, there will be section object.
+A section class will get in the constructor two string, one that represent 
+the instructions for creating a filter and the other holds the instructions for creating an order object.
+every string will be sent to the factories, each factory will try to create an object 
+from the string he got from the section.
+there are some conditions about the length of the instructor string that would not
+ be accepted so the factory will throw number one exceptions and the section objects will catch them.
+if no exception has been thrown the string will be passed to the filter (or order) object.
+every filter class has an abstract father class for checking if the instructions are legal,
+if its not illegal, (like negative double number that represents the size)
+exception type 1 will be thrown to threw the factory to the section class
+and the section class will catch it.
+after the abstract filter class confirmed that the input is legal, 
+a filter object will be made and the section which 
+created it will hold it in the class, same for an order object.
+
+The manager which managing all the program that been created by the main class will create array of files 
+that came from the input and a command file, holding the instructions for creating filters and orders.
+the manager will sent in to the parser the command file and so on, until he will get a list of sections.
+He will run on each section, and will filter and order the files by using 
+each filter and order object in each section.
+Warning massages will be printed indicates where there is a problem and after 
+that the files in order will be printed. and we done.
+
+i decided to create an interface for filter classes and order classes, 
+because there are few classes that shares the same functionality.
+and three abstract father classes that implements the main filter 
+class for throwing type one exceptions as i mentioned.
+
+I decided to create a quick sort algorithm to implements the order part,
+ in that case as we learned in the the data structure class the running time is O(nlogn) as requested.
+
+i tried that the exception Type 1 will be thrown as deep as possible to make 
+the program more modularity for adding more filters and orders..
+
+I have learned a lot from the exercise, i learned how exceptions can use for 
+simplify the code and how it is important to use them.
+the exercise was hard and i feel that there is a big difference 
+between that exercise and the exercise we worked on before,
+but still it was good because i used all i have learned from the beginning of the year until now.
+
+
+ 
+
+
+ 
+ 
+ 
