@@ -1,0 +1,85 @@
+david.oriel
+
+LIST OF LOGINS: none..
+
+==================
+=  Description:  =
+==================
+
+In this exercise i created two kinds of hash set, an open hash set and closed hash set.
+those two hash sets implements the simple hash set abstract class.
+By that they have the basic methods for an hash set that includes adding an item, deleting an item,
+search for an item and calculates an item spot that will be stored in, in the array. 
+
+The open hash is basically an aray of linked list that have been wrapped. 
+when there are items to be added to the open hash set, 
+the "add" method will fined the items hash code, and the clamp method will fined the index in the array
+that a specific item is belong to, after that the item will be added to the array.
+It possible that there will be collisions, that means that two items will have the same hash code.
+for solving this problem we designed the open hash set to have an object that wrapped a linked list,
+and then we can add those two items to the same place in the array, and they will be organized in a linked list.
+More of that, an open hash set has an upperfactor and lowerfactor that decides when there is enough items to
+expand or shrink the array, if the size of the open hash set will be bigger then the upperfactor doubles the 
+capacity (the length of the array) the items will be copied to a new bigger array, and the same for the 
+condition in which the size will be smaller and then the array will be shrinked.
+
+The closed hash set is a bit different, in this data structure we would not use linked lists to help us storing 
+values. while adding values will be the same as the open hash set, handling collisions will be different.
+if an items has the same hash code as a value already stored in the array, we will keep searching for 
+a new hash code with adjusted formula until a free spot in the array will be found.
+As to the lower and higher factory, this will be the same as the open hash set.
+
+
+==================
+=  Design issues:  =
+==================
+
+The first issue that has been raised is if i should use the fasad class for wrapping the linked lists or construct
+a special wrapper class. 
+I decided to use the wrapper class because, first the wrapper class is a nested class in the open hash class,
+meaning i can use the same globals and other factors for both of the classes, i think it is more modular in 
+that way, and in general the API of that class is more controllable.
+Second, the facad class doesnt implement a linked list object and i wasnt quite sure how to solve it.
+
+The second issue is if i should fill all the array with linked list at the beginning or only when an item is 
+actually has added to that specific place.
+i decided not to fill the array with the wrapper object (also when re-hashing) because i think it takes more 
+space and power to create objects all the time instead of only checking if a specific spot is "null".
+
+To solve the deleting problem in the closed hash set i decided to create a special String that is hold in a unique 
+place in the memory.
+when deleting an element i set the deleting place to hold that "flag" and its solving the problem because 
+while searching, if a place holds that string the algorythm knows to keep searching because maybe there is
+another elements that been kept more forward then that exact spot. 
+The searching will be stopped only when it will get to a place contain the value "null".
+
+Results:
+By looking at the results the weaknesses of the open hash set and closed hash set is when the all the Strings has the
+same hash code, because of that the open hash set will stores all the values in one linked list representing
+by the specific hash code. thats why there is no big difference between the linked list data structure and the 
+open hash set i have created. About the closed hash set is almost the same story, when we are adding elements with the 
+same hash the storing will not be proportional to the free space there is in the closed hash set.
+
+By looking at the results the java hash set has very good results in all the tests, as expected a java linked list
+has bad results, the tree hash is in log(n) time, and thats more then O(1) meanning somtimes the open and the closed 
+hash sets gets better results then the tree hash.
+we can see the java hash set works better then the open and the closed because i believe that in the java hash set 
+there is no double checking items (things i missed in my classes).
+As the results telling, in all the tests the open hash set gets better or equal results to the closed hash set.
+thats why it will be better to use the open hash set then the closed hash set.
+
+NOTE:
+to choose between tests, enter which tests do you want to run as parameters (from "a" to "f").
+
+In conclusion i can say that the the exercise was very good, i learned a lot about collections and how they are working.
+
+
+
+
+
+ 
+
+
+ 
+ 
+ 
